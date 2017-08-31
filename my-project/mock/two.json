@@ -1,0 +1,15 @@
+{
+	"departmenta":[{
+		"id":123,
+		"department":"人事部",
+		"personnel":"XXX",
+		"position":"程序猿",
+		"date":"2015-05-14"
+	},{
+		"id":456,
+		"department":"人事部",
+		"personnel":"AAA",
+		"position":"程序猿",
+		"date":"2015-05-14"
+	}]
+}
