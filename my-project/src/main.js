@@ -14,24 +14,23 @@ Vue.use(Element)
 Vue.use(VueResource)
 Vue.config.productionTip = false
 
-Vue.http.interceptors.push((request,next)=>{
-	if(store.state.token){
-	request.headers.set('Authorization',store.state.token);
-	next(response=>{
-		return response;
-	})
-	}else{
-  next(response=>{
-    return response
-  })
-}
-})
-
+Vue.http.interceptors.push((request, next) => {
+  if (store.state.token) {
+    request.headers.set('Authorization', store.state.token);
+    next(response => {
+      return response;
+    })
+  } else {
+    next(response => {
+      return response
+    })
+  }
+});
 
 /* eslint-disable no-new */
 new Vue({
-	el: '#app',
-    router,
-    store,
-    render: h => h(App)
+  el: '#app',
+  router,
+  store,
+  render: h => h(App)
 }).$mount('#app');
