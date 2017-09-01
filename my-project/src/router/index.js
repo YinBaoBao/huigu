@@ -24,89 +24,89 @@ import Bankmore from '../components/page/organization/bankmore.vue'
 import Bankdepartment from '../components/page/organization/bankdepartment.vue'
 import Bankuser from '../components/page/management/bankuser.vue'
 
-Vue.use(Router)
+Vue.use(Router);
 
-  const routes=[
-    {
-    	path:'/',
-    	redirect: '/main'
-    },{
-    	path:'/main',
-    	component:Main,
-    	children:[/*{
-    		path:'/',
-    		component:Bank
-    	},*/{
-    		path:'/province',
-    		component:Province
-    	},{
-    		path:'/urban',
-    		component:Urban
-    	},{
-    		path:'/district',
-    		component:District
-    	},{
-    		path:'/headoffice',
-    		component:Headoffice
-    	},{
-    		path:'/branch',
-    		component:Branch
-    	},{
-            path:'/agency',
-            components:{a:Agency},
-            children:[{
-                path:'/',
-                component:AgencyMore
-            },{
-                path:'/agencymore',
-                component:AgencyMore
-            },{
-                path:'/department',
-                component:Department
-            },{
-                path:'/user',
-                component:User
-            }]
-        },{
-            path:'/bank',
-            components:{a:Bank},
-            children:[{
-                path:'/',
-                component:Bankmore
-            },{
-                path:'/bankmore',
-                component:Bankmore
-            }/*,{
-                path:'/bankdepartment',
-                component:Bankdepartment
-            }*/,{
-                path:'/bankuser',
-                component:Bankuser
-            }]
-        }/*,{
-            path:'/department',
-            component:Department
-        }*/,{
-            path:'/module',
-            components:{b:Module}
-        },{
-            path:'/operation',
-            components:{b:Operation}
-        },{
-            path:'/role',
-            components:{b:Role}
-        }/*,{
-            path:'/user',
-            component:User
-        }*/]
-    },{
-      path: '/login',
-      component: Login
-    }
-  ];
+const routes = [
+  {
+    path: '/',
+    redirect: '/main'
+  }, {
+    path: '/main',
+    component: Main,
+    children: [/*{
+     path:'/',
+     component:Bank
+     },*/{
+      path: '/province',
+      component: Province
+    }, {
+      path: '/urban',
+      component: Urban
+    }, {
+      path: '/district',
+      component: District
+    }, {
+      path: '/headoffice',
+      component: Headoffice
+    }, {
+      path: '/branch',
+      component: Branch
+    }, {
+      path: '/agency',
+      components: {a: Agency},
+      children: [{
+        path: '/',
+        component: AgencyMore
+      }, {
+        path: '/agencymore',
+        component: AgencyMore
+      }, {
+        path: '/department',
+        component: Department
+      }, {
+        path: '/user',
+        component: User
+      }]
+    }, {
+      path: '/bank',
+      components: {a: Bank},
+      children: [{
+        path: '/',
+        component: Bankmore
+      }, {
+        path: '/bankmore',
+        component: Bankmore
+      }/*,{
+       path:'/bankdepartment',
+       component:Bankdepartment
+       }*/, {
+        path: '/bankuser',
+        component: Bankuser
+      }]
+    }/*,{
+     path:'/department',
+     component:Department
+     }*/, {
+      path: '/module',
+      components: {b: Module}
+    }, {
+      path: '/operation',
+      components: {b: Operation}
+    }, {
+      path: '/role',
+      components: {b: Role}
+    }/*,{
+     path:'/user',
+     component:User
+     }*/]
+  }, {
+    path: '/login',
+    component: Login
+  }
+];
 
 const router = new Router({
-    routes
+  routes
 });
 
 export default router;
